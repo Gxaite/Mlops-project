@@ -328,14 +328,13 @@ services:
   # ============================================
   airflow-cli:
     <<: *airflow-common
-volumes:
-  postgres_data:
-  minio_data:
-  superset_data:
-
-networks:
-  default:
-    name: mlops-network
+    container_name: mlops-airflow-cli
+    profiles:
+      - debug
+    environment:
+      <<: *airflow-common-env
+      CONNECTION_CHECK_MAX_COUNT: "0"
+    command:
       - bash
       - -c
       - airflow
@@ -343,6 +342,7 @@ networks:
 volumes:
   postgres_data:
   minio_data:
+  superset_data:
 
 networks:
   default:
