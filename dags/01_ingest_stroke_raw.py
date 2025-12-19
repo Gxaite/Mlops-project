@@ -13,8 +13,9 @@ import pandas as pd
 import os
 
 # Configuracoes
-DATASET_URL = "https://raw.githubusercontent.com/fedesoriano/stroke-prediction-dataset/main/healthcare-dataset-stroke-data.csv"
-BACKUP_URL = "https://raw.githubusercontent.com/plotly/datasets/master/stroke_prediction_dataset.csv"
+# Dataset de AVC - Stroke Prediction Dataset
+DATASET_URL = "https://raw.githubusercontent.com/plotly/datasets/master/stroke_prediction_dataset.csv"
+BACKUP_URL = "https://raw.githubusercontent.com/amanwarghade/Stroke-Prediction-Dataset/main/healthcare-dataset-stroke-data.csv"
 
 DATA_PATH = "/opt/airflow/data"
 RAW_PATH = f"{DATA_PATH}/raw"
